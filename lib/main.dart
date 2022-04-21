@@ -35,7 +35,7 @@ class _MyAppState extends State<MyApp> {
                   child: Column(
                     children: [
                       Container(
-                        color: Color(0xff54759e),
+                        color: const Color(0xff54759e),
                         height: 170,
                         width: double.infinity,
                         child: Padding(
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.end,
                             crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            children: const [
                               CircleAvatar(radius: 40),
                               SizedBox(
                                 height: 6,
@@ -71,7 +71,7 @@ class _MyAppState extends State<MyApp> {
                                   child: Row(
                                     children: [
                                       e.key,
-                                      SizedBox(width: 30),
+                                      const SizedBox(width: 30),
                                       Text(e.value)
                                     ],
                                   ),
@@ -106,7 +106,7 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 ),
-                body: TabBarView(
+                body: const TabBarView(
                   children: [
                     ChatPage(),
                     CallPage(),
@@ -136,7 +136,7 @@ class _MyAppState extends State<MyApp> {
                                         child: Column(
                                           children: [
                                             Container(
-                                              color: Color(0xff54759e),
+                                              color: const Color(0xff54759e),
                                               height: 170,
                                               width: double.infinity,
                                               child: Padding(
@@ -147,7 +147,7 @@ class _MyAppState extends State<MyApp> {
                                                       MainAxisAlignment.end,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
-                                                  children: [
+                                                  children: const [
                                                     CircleAvatar(radius: 40),
                                                     SizedBox(
                                                       height: 6,
@@ -181,7 +181,8 @@ class _MyAppState extends State<MyApp> {
                                                         child: Row(
                                                           children: [
                                                             e.key,
-                                                            SizedBox(width: 30),
+                                                            const SizedBox(
+                                                                width: 30),
                                                             Text(e.value)
                                                           ],
                                                         ),
@@ -204,10 +205,10 @@ class _MyAppState extends State<MyApp> {
                                 ],
                               ));
                     },
-                    child: Icon(Icons.menu),
+                    child: const Icon(Icons.menu),
                   );
                 }),
-                middle: Text("Platform Converter"),
+                middle: const Text("Platform Converter"),
                 trailing: CupertinoSwitch(
                   onChanged: (val) {
                     setState(() {
@@ -221,7 +222,7 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   IndexedStack(
                     index: _currentindex,
-                    children: [
+                    children: const [
                       ChatPage(),
                       CallPage(),
                       SettingPage(),
@@ -229,7 +230,7 @@ class _MyAppState extends State<MyApp> {
                   ),
                   Column(
                     children: [
-                      Spacer(),
+                      const Spacer(),
                       CupertinoTabBar(
                           onTap: (val) {
                             _currentindex = val;
